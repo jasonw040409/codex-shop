@@ -2,24 +2,39 @@
 const picks = [
   {
     number: "01",
-    course: "Garden Starter",
+    course: "Ember Garden",
     intro:
-      "Charred leeks with toasted hazelnut, lemon cream, and tender winter greens.",
+      "Charred leeks with toasted hazelnut, Meyer lemon cream, and winter greens.",
     price: 18,
   },
   {
     number: "02",
-    course: "Market Fish",
+    course: "Harbor Cod",
     intro:
-      "Roasted cod served over fennel broth with spring herbs and olive oil.",
+      "Roasted cod served over fennel broth with spring herbs and arbequina oil.",
     price: 34,
   },
   {
     number: "03",
-    course: "Citrus Finish",
+    course: "Citrus Hour",
     intro:
-      "Olive oil cake with bright citrus, whipped mascarpone, and candied zest.",
+      "Olive oil cake with blood orange, whipped mascarpone, and candied zest.",
     price: 14,
+  },
+];
+
+const coverSections = [
+  {
+    title: "From the Hearth",
+    detail: "Live-fire vegetables, roasted fish, and shareable mains finished over oak.",
+  },
+  {
+    title: "Market Pour",
+    detail: "Old World bottles, low-intervention favorites, and citrus-led aperitifs.",
+  },
+  {
+    title: "Room for Gatherings",
+    detail: "A warm dining room for weeknight dinners, birthdays, and quiet celebrations.",
   },
 ];
 </script>
@@ -40,35 +55,43 @@ const picks = [
       <div class="hero-content">
         <p class="eyebrow">Seasonal neighborhood dining</p>
         <h1>Maribel Table</h1>
+        <p class="hero-title">Wood-fired supper, market-led plates, easy hospitality.</p>
         <p class="lede">
-          Enjoy wood-fired dishes, fresh market ingredients, and warm service in
-          a relaxed dining room.
+          A relaxed dining room built around oak-fired cooking, bright produce,
+          and the kind of service that lets a weeknight meal linger.
         </p>
         <div class="actions">
           <a class="button primary" href="#reserve">Book a table</a>
           <a class="button secondary" href="#menu">View menu</a>
         </div>
+
+        <div class="cover-sections" aria-label="Cover highlights">
+          <article v-for="section in coverSections" :key="section.title">
+            <h2>{{ section.title }}</h2>
+            <p>{{ section.detail }}</p>
+          </article>
+        </div>
       </div>
 
       <aside class="service-panel" aria-label="Restaurant details">
         <div>
-          <span>Dinner</span>
-          <strong>Tue-Sun, 5:00-10:30</strong>
+          <span>Evening Service</span>
+          <strong>Tuesday-Sunday, 5:00-10:30</strong>
         </div>
         <div>
-          <span>Chef's Menu</span>
-          <strong>Four courses, $78</strong>
+          <span>Seasonal Tasting</span>
+          <strong>Four-course chef's menu, $78</strong>
         </div>
         <div>
-          <span>Location</span>
-          <strong>18 Waverly Lane</strong>
+          <span>Neighborhood Corner</span>
+          <strong>18 Waverly Lane, West Market</strong>
         </div>
       </aside>
     </section>
   </main>
 
   <section class="preview" id="menu" aria-label="Menu preview">
-    <p>Tonight's picks</p>
+    <p>Tonight's Featured Plates</p>
     <div class="preview-grid">
       <article v-for="pick in picks" :key="pick.number">
         <span>{{ pick.number }}</span>
