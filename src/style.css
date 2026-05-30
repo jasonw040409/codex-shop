@@ -88,15 +88,15 @@ a {
   min-height: calc(92vh - 76px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 680px) minmax(260px, 360px);
+  grid-template-columns: minmax(0, 760px) minmax(260px, 360px);
   align-items: end;
   justify-content: space-between;
-  gap: 48px;
-  padding: 84px 0 70px;
+  gap: 44px;
+  padding: 64px 0 52px;
 }
 
 .hero-content {
-  max-width: 680px;
+  max-width: 760px;
 }
 
 .eyebrow {
@@ -117,9 +117,18 @@ h1 {
   font-weight: 700;
 }
 
+.hero-title {
+  max-width: 620px;
+  margin: 24px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  line-height: 1.04;
+  font-weight: 600;
+}
+
 .lede {
   max-width: 570px;
-  margin: 28px 0 0;
+  margin: 18px 0 0;
   color: var(--muted);
   font-size: 1.16rem;
   line-height: 1.7;
@@ -158,6 +167,38 @@ h1 {
   backdrop-filter: blur(12px);
 }
 
+.cover-sections {
+  max-width: 760px;
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255, 248, 235, 0.24);
+}
+
+.cover-sections article {
+  min-height: 150px;
+  padding: 22px 20px;
+  background: rgba(13, 15, 12, 0.58);
+  backdrop-filter: blur(14px);
+}
+
+.cover-sections h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  line-height: 1.02;
+  font-weight: 600;
+}
+
+.cover-sections p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
 .service-panel {
   align-self: end;
   display: grid;
@@ -191,8 +232,8 @@ h1 {
 
 .service-panel strong {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.42rem;
-  line-height: 1.05;
+  font-size: 1.28rem;
+  line-height: 1.12;
 }
 
 .preview {
@@ -294,16 +335,28 @@ h1 {
     width: min(100% - 28px, 1180px);
     min-height: calc(94vh - 76px);
     grid-template-columns: 1fr;
-    gap: 34px;
-    padding: 96px 0 36px;
+    gap: 30px;
+    padding: 70px 0 36px;
   }
 
   h1 {
     font-size: clamp(4rem, 24vw, 7rem);
   }
 
+  .hero-title {
+    font-size: clamp(1.55rem, 8vw, 2.25rem);
+  }
+
   .lede {
     font-size: 1rem;
+  }
+
+  .cover-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-sections article {
+    min-height: 0;
   }
 
   .service-panel {
