@@ -4,21 +4,21 @@ const picks = [
     number: "01",
     course: "Garden Starter",
     intro:
-      "Charred leeks with toasted hazelnut, lemon cream, and tender winter greens.",
+      "Charred leeks are layered with toasted hazelnuts, lemon cream, and tender winter greens, then finished with herbs and a bright vinaigrette for a smoky, refreshing opening course.",
     price: 18,
   },
   {
     number: "02",
     course: "Market Fish",
     intro:
-      "Roasted cod served over fennel broth with spring herbs and olive oil.",
+      "Day-boat cod is gently roasted until flaky and served over a warm fennel broth with spring herbs, preserved lemon, and a ribbon of olive oil.",
     price: 34,
   },
   {
     number: "03",
     course: "Citrus Finish",
     intro:
-      "Olive oil cake with bright citrus, whipped mascarpone, and candied zest.",
+      "A tender olive oil cake arrives with bright citrus segments, whipped mascarpone, candied zest, and a drizzle of syrup that keeps the final bite light.",
     price: 14,
   },
 ];
