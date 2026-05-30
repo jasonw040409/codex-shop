@@ -2,22 +2,26 @@
 const picks = [
   {
     number: "01",
-    name: "Charred leeks, hazelnut, lemon cream",
+    course: "Garden Starter",
+    intro:
+      "Charred leeks with toasted hazelnut, lemon cream, and tender winter greens.",
     price: 18,
   },
   {
     number: "02",
-    name: "Roasted cod, fennel broth, spring herbs",
+    course: "Market Fish",
+    intro:
+      "Roasted cod served over fennel broth with spring herbs and olive oil.",
     price: 34,
   },
   {
     number: "03",
-    name: "Olive oil cake, citrus, whipped mascarpone",
+    course: "Citrus Finish",
+    intro:
+      "Olive oil cake with bright citrus, whipped mascarpone, and candied zest.",
     price: 14,
   },
 ];
-
-const combinedPrice = picks.reduce((total, pick) => total + pick.price, 0);
 </script>
 
 <template>
@@ -68,15 +72,12 @@ const combinedPrice = picks.reduce((total, pick) => total + pick.price, 0);
     <div class="preview-grid">
       <article v-for="pick in picks" :key="pick.number">
         <span>{{ pick.number }}</span>
-        <h2>{{ pick.name }}</h2>
+        <h2>{{ pick.course }}</h2>
+        <p class="course-intro">{{ pick.intro }}</p>
         <div class="price-row">
           <div>
             <small>Course price</small>
             <strong>${{ pick.price }}</strong>
-          </div>
-          <div>
-            <small>Meal total</small>
-            <strong>${{ combinedPrice }}</strong>
           </div>
         </div>
       </article>
